@@ -2,18 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\CreatNewsController;
+use App\Http\Controllers\CreatController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-Route::get('/', IndexController::class);
+Route::prefix('news')->group(function () {
+    Route::get('/', IndexController::class);
+    Route::get('/create', CreatController::class);
+    Route::post('/create', CreatNewsController::class)->name('create.news');
 
-Route::get('/news');
+});
