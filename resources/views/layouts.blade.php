@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-md">
-        <a class="navbar-brand" href="#">Новости</a>
+        <a class="navbar-brand" href="{{route('news.index')}}">Новости</a>
     </div>
 </nav>
 @yield('content')
