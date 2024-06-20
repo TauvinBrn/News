@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UpdateController extends Controller
 {
@@ -15,7 +16,6 @@ class UpdateController extends Controller
             'title' => 'string',
             'content' => 'string',
             'description' => 'string',
-
         ]));
 
         return redirect()->route('news.index');

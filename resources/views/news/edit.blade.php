@@ -10,7 +10,7 @@
 
         <div class="col-md-12">
             <label for="inputEmail4" class="form-label">Заголовок</label>
-            <textarea  name="title" class="form-control" id="exampleFormControlTextarea1" rows="3">{{ $news->content }}</textarea>
+            <textarea  name="title" class="form-control" id="exampleFormControlTextarea1" rows="3">{{ $news->title }}</textarea>
 
         </div>
             <div class="mb-3">

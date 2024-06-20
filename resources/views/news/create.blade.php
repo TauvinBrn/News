@@ -31,16 +31,16 @@
                 </div>
                 <div>
                     <label for="formFileLg" class="form-label">Фотография №1</label>
-                    <input name="images" class="form-control form-control-lg" id="formFileLg" type="file">
+                    <input name="images" class="form-control form-control-lg" id="images" type="file">
                     @error('images')
-                    <p class="text-danger">Это поле обязательно для запонлнения</p>
+                    <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
                 <div>
                     <label for="formFileLg" class="form-label">Фотография №2</label>
-                    <input name="images2" class="form-control form-control-lg" id="formFileLg" type="file">
+                    <input name="images2" class="form-control form-control-lg" id="images2" type="file">
                     @error('images2')
-                    <p class="text-danger">Это поле обязательно для запонлнения</p>
+                    <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
         <div class="col-12 mb-5">

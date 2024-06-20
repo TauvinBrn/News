@@ -7,18 +7,11 @@
 
         <h3 class=" mt-5 card-title">{{ $news->title }}</h3>
         <h5 class=" mt-3 card-text">{{ $news->description }}</h5>
-        <img class="figure-img img-fluid rounded" src="/storage/{{$news->images}}" alt="Img">
-
-        <style>
-            .img-fluid {
-                max-width: 35%;
-                height: auto;
-            }
-        </style>
+        <img class="figure-img img-fluid rounded w-25" src="/storage/{{$news->images}}" alt="Img">
 
         <p class="card-text">{{ $news->content }}</p>
 
-        <img class="figure-img img-fluid rounded" src="/storage/{{$news->images2}}" alt="Img">
+        <img class="figure-img img-fluid rounded w-25" src="/storage/{{$news->images2}}" alt="Img">
         <div>
             <a class="btn btn-primary m-3" href="{{route('news.show')}}">Вернутся к остальным новостям</a>
             <a class="btn btn-success m-3" href="{{route('news.edit',$news->id)}}">Редактировать новость</a>

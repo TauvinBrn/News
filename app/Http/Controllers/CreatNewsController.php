@@ -17,7 +17,6 @@ class CreatNewsController extends Controller
             'images'=>'file',
             'images2' =>'file',
         ]);
-
         $news['images'] = Storage::put('/news', $news['images']);
         $news['images2'] = Storage::put('/news', $news['images2']);
 
