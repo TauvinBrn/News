@@ -1,0 +1,7 @@
+p {
+    width: clamp(20ch, 50%, 75ch);
+}
+
+.dura {
+    width: 100px;
+}
