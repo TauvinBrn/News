@@ -20,9 +20,9 @@
 
         <img class="figure-img img-fluid rounded" src="/storage/{{$news->images2}}" alt="Img">
         <div>
-            <a class="btn btn-primary mt-3" href="{{route('news.show')}}">Вернутся к остальным новостям</a>
-            <a class="btn btn-success mt-3" href="{{route('news.edit',$news->id)}}">Редактировать новость</a>
-            <a class="btn btn-danger mt-3" href="{{route('news.delete',$news->id) }}">Удалить нововсть</a>
+            <a class="btn btn-primary m-3" href="{{route('news.show')}}">Вернутся к остальным новостям</a>
+            <a class="btn btn-success m-3" href="{{route('news.edit',$news->id)}}">Редактировать новость</a>
+            <a class="btn btn-danger m-3" href="{{route('news.delete',$news->id) }}">Удалить нововсть</a>
         </div>
     </div>
 

@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-sm-19 text-center">
                     <div class="card">
-                        <div class="card-body">
+                        <div class=" card-body">
                             <h5 class="card-title">{{ $n->title }}</h5>
                             <p class="card-text max">{{$n->description}}</p>
                             <a class="btn btn-primary" href="{{ route('news.show_by_index', $n->id) }}"> Читать новость  </a>
