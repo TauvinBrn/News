@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\News\StoreRequest;
+use App\Http\Requests\News\UpdateRequest;
 use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -12,19 +14,13 @@ class NewsController extends Controller
     {
         return view('news.index');
     }
-    public function creat()
+    public function create()
     {
         return view('news.create');
     }
-    public function store()
+    public function store(StoreRequest $request)
     {
-        $news = request()->validate([
-            'title' => 'string',
-            'content' => 'string',
-            'description' => 'string',
-            'images'=>'file',
-            'images2' =>'file',
-        ]);
+        $news = $request->validated();
         $news['images'] = Storage::put('/news', $news['images']);
         $news['images2'] = Storage::put('/news', $news['images2']);
         News::create($news);
@@ -47,14 +43,10 @@ class NewsController extends Controller
         $news = News::find($id);
         return view('news.edit', compact('news'));
     }
-    public function update($id)
+    public function update(UpdateRequest $request, $id)
     {
         $news = News::find($id);
-        $news->update( request()->validate([
-            'title' => 'string',
-            'content' => 'string',
-            'description' => 'string',
-        ]));
+        $news->update( $request->validated());
 
         return redirect()->route('news.index');
     }
